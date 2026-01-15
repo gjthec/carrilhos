@@ -9,7 +9,7 @@
   --primary-dark: #0078d4;
   --primary-light: #3399ff;
   --primary-hover: #002348;
-  --accent-color: #6366f1;
+  --accent-color: #38bdf8;
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-tertiary: #94a3b8;
@@ -107,4 +107,3 @@ code {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-
