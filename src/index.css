@@ -41,6 +41,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
   background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at top, rgba(0, 142, 249, 0.18), transparent 45%),
+    radial-gradient(circle at 25% 35%, rgba(56, 189, 248, 0.12), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 142, 249, 0.08), transparent 40%);
+  background-attachment: fixed;
   line-height: 1.6;
   overflow-x: hidden;
 }
