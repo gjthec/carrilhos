@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import ComparisonSection from './components/ComparisonSection';
 import FAQ from './components/FAQ';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <ComparisonSection />
         <FAQ />
         <About />
         <Testimonials />
@@ -27,4 +29,3 @@ function App() {
 }
 
 export default App;
-

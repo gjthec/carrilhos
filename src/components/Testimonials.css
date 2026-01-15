@@ -233,6 +233,18 @@
   background: var(--primary-light);
 }
 
+.testimonials-cta {
+  margin-top: 3rem;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.testimonials-cta p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .testimonials {
     padding: 4rem 0;
@@ -282,4 +294,3 @@
     font-size: 1.5rem;
   }
 }
-

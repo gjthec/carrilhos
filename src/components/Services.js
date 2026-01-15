@@ -109,7 +109,7 @@ const Services = () => {
           <span className="section-tag">Nossos Serviços</span>
           <h2 className="section-title">Soluções Completas para seu E-commerce</h2>
           <p className="section-description">
-            Oferecemos serviços especializados para transformar seu negócio online em uma máquina de vendas.
+            Estratégia, operação e performance em um plano sob medida para escalar seu e-commerce com previsibilidade.
           </p>
         </div>
 
@@ -142,7 +142,7 @@ const Services = () => {
                   className="service-button"
                   onClick={() => scrollToSection('contact')}
                 >
-                  Saiba Mais
+                  Quero esse plano
                 </button>
               </div>
             );
@@ -150,12 +150,12 @@ const Services = () => {
         </div>
 
         <div className="services-cta">
-          <p>Pronto para transformar seu e-commerce?</p>
+          <p>Pronto para transformar seu e-commerce em um motor de vendas?</p>
           <button
             className="btn btn-primary"
             onClick={() => scrollToSection('contact')}
           >
-            Solicitar Consultoria
+            Agendar diagnóstico
           </button>
         </div>
       </div>
@@ -164,6 +164,5 @@ const Services = () => {
 };
 
 export default Services;
-
 
 

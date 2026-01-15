@@ -157,10 +157,24 @@ const Testimonials = () => {
             </button>
           </div>
         </div>
+
+        <div className="testimonials-cta">
+          <p>Quer resultados parecidos no seu e-commerce?</p>
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+          >
+            Quero falar com a Carrilhos
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Testimonials;
-

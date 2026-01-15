@@ -161,8 +161,8 @@ const Hero = () => {
             </h1>
             
             <p className="hero-description">
-              Soluções estratégicas em e-commerce e gestão para empresas que buscam 
-              crescimento sustentável e excelência operacional no ambiente digital.
+              Estratégia, operação e performance para empresas que buscam escalar o e-commerce
+              com previsibilidade, margem e uma jornada de compra impecável.
             </p>
 
             <div className="hero-actions">
@@ -170,16 +170,22 @@ const Hero = () => {
                 className="btn btn-primary"
                 onClick={() => scrollToSection('contact')}
               >
-                Solicitar Consultoria
+                Solicitar diagnóstico gratuito
                 <HiArrowRight />
               </button>
               <button 
                 className="btn btn-secondary"
-                onClick={() => scrollToSection('services')}
+                onClick={() => scrollToSection('comparativo')}
               >
-                Conhecer Serviços
+                Ver antes e depois
               </button>
             </div>
+            <button
+              className="btn btn-secondary hero-secondary-cta"
+              onClick={() => scrollToSection('services')}
+            >
+              Conhecer serviços
+            </button>
           </div>
         </div>
       </div>

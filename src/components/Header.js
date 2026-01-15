@@ -56,6 +56,9 @@ const Header = () => {
             <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
               Serviços
             </a>
+            <a href="#comparativo" onClick={(e) => { e.preventDefault(); scrollToSection('comparativo'); }}>
+              Comparativo
+            </a>
             <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
               Sobre
             </a>
@@ -88,6 +91,5 @@ const Header = () => {
 };
 
 export default Header;
-
 
 

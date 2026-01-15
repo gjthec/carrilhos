@@ -218,7 +218,7 @@ const About = () => {
               className="btn btn-primary"
               onClick={() => scrollToSection('contact')}
             >
-              Saiba Mais
+              Falar com especialista
               <HiArrowRight />
             </button>
           </div>
