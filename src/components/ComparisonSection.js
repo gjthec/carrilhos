@@ -235,8 +235,8 @@ const ComparisonSection = () => {
                         <stop offset="100%" stopColor="#94a3b8" stopOpacity="0" />
                       </linearGradient>
                       <linearGradient id="comparisonAfter" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.45" />
-                        <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
+                        <stop offset="0%" stopColor="#008ef9" stopOpacity="0.45" />
+                        <stop offset="100%" stopColor="#008ef9" stopOpacity="0" />
                       </linearGradient>
                     </defs>
 
@@ -262,7 +262,7 @@ const ComparisonSection = () => {
                     <path
                       d={chart.after.line}
                       fill="none"
-                      stroke="#7c3aed"
+                      stroke="#008ef9"
                       strokeWidth="3"
                       opacity={isAfter ? 1 : 0}
                     />
