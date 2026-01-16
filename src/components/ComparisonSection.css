@@ -1,7 +1,6 @@
 .comparison {
   padding: 4.5rem 0;
-  background: radial-gradient(circle at top, rgba(0, 142, 249, 0.18), transparent 45%),
-    linear-gradient(135deg, #05070b 0%, #0b0f1c 60%, #111827 100%);
+  background: transparent;
 }
 
 .comparison-grid {
