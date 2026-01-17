@@ -62,7 +62,7 @@ const ComparisonSection = () => {
       <div className="container">
         <div className="comparison-grid">
           <div className="comparison-content">
-            <div className="comparison-badge ui-badge">
+            <div className="section-tag ui-badge">
               <HiArrowTrendingUp size={16} />
               Resultados comprovados
             </div>
