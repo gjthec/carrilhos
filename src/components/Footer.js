@@ -15,12 +15,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer ui-section reveal">
+    <footer className="footer ui-section reveal glow-bg">
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <h3>Consultoria Carrilhos</h3>
+              <h3 className="glow-text">Consultoria Carrilhos</h3>
               <p>Especialistas em E-commerce e Gestão</p>
             </div>
             <p className="footer-description">
@@ -129,7 +129,7 @@ const Footer = () => {
                 href="https://calendly.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="footer-button ui-button"
+                className="footer-button ui-button glow-button"
               >
                 <HiCalendar />
                 <span>Agendar Consulta</span>

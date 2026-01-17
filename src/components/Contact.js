@@ -137,11 +137,11 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="contact ui-section reveal" ref={sectionRef}>
+    <section id="contact" className="contact ui-section reveal glow-bg" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
-          <span className="section-tag ui-badge">Entre em Contato</span>
-          <h2 className="section-title">Vamos conversar sobre seu projeto</h2>
+          <span className="section-tag ui-badge glow-badge">Entre em Contato</span>
+          <h2 className="section-title glow-text">Vamos conversar sobre seu projeto</h2>
           <p className="section-description">
             Estamos prontos para ajudar você a transformar seu e-commerce
           </p>
@@ -163,7 +163,7 @@ const Contact = () => {
                     key={index}
                     ref={el => contactItemRefs.current[index] = el}
                     href={info.link || '#'}
-                    className="contact-item ui-card hover-lift ui-link"
+                    className="contact-item ui-card hover-lift glow-card ui-link"
                     style={{ animationDelay: `${index * 0.15}s` }}
                   >
                     <div className="contact-icon">
@@ -195,7 +195,7 @@ const Contact = () => {
             </div> */}
           </div>
 
-          <div className="contact-form-wrapper ui-card" ref={formRef}>
+          <div className="contact-form-wrapper ui-card glow-card" ref={formRef}>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Nome Completo *</label>
@@ -262,7 +262,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="btn btn-primary submit-button ui-button"
+                className="btn btn-primary submit-button ui-button glow-button"
                 disabled={isSubmitting}
               >
                 <FiSend />

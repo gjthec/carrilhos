@@ -141,7 +141,7 @@ const Hero = () => {
 
   return (
     <>
-    <section id="hero" className="hero ui-section reveal" ref={heroRef}>
+    <section id="hero" className="hero ui-section reveal glow-bg" ref={heroRef}>
       <div className="hero-background">
         <div className="hero-logo-background">
           <img src={logoIcon} alt="Carrilhos" />
@@ -152,7 +152,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-layout">
           <div className="hero-content">
-            <h1 className="hero-title">
+            <h1 className="hero-title glow-text">
               <span className="typed-text">{typedText}</span>
               <span className="cursor">|</span>
               <span className="hero-title-subtitle hero-title-subtitle-inline"> de E-commerce</span>
@@ -167,21 +167,21 @@ const Hero = () => {
 
             <div className="hero-actions">
               <button 
-                className="btn btn-primary ui-button"
+                className="btn btn-primary ui-button glow-button"
                 onClick={() => scrollToSection('contact')}
               >
                 Solicitar diagnóstico gratuito
                 <HiArrowRight />
               </button>
               <button 
-                className="btn btn-secondary ui-button"
+                className="btn btn-secondary ui-button glow-button"
                 onClick={() => scrollToSection('comparativo')}
               >
                 Ver antes e depois
               </button>
             </div>
             <button
-              className="btn btn-secondary hero-secondary-cta ui-button"
+              className="btn btn-secondary hero-secondary-cta ui-button glow-button"
               onClick={() => scrollToSection('services')}
             >
               Conhecer serviços

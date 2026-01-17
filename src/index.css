@@ -41,6 +41,12 @@
   --radius-lg: 16px;
   --border-soft: 1px solid rgba(148, 163, 184, 0.18);
   --focus-ring: 0 0 0 3px rgba(0, 142, 249, 0.35);
+  --glow-primary: rgba(0, 142, 249, 0.45);
+  --glow-secondary: rgba(56, 189, 248, 0.35);
+  --glow-soft: 0 0 18px rgba(0, 142, 249, 0.2);
+  --glow-medium: 0 0 26px rgba(0, 142, 249, 0.35);
+  --glow-strong: 0 0 40px rgba(0, 142, 249, 0.5);
+  --glow-bg-opacity: 0.2;
 }
 
 body {
@@ -63,6 +69,25 @@ body {
   position: relative;
 }
 
+.glow-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 10%, var(--glow-primary), transparent 45%),
+    radial-gradient(circle at 70% 20%, var(--glow-secondary), transparent 50%),
+    radial-gradient(circle at 50% 75%, rgba(0, 142, 249, 0.2), transparent 55%);
+  opacity: var(--glow-bg-opacity);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 .ui-card {
   border-radius: var(--radius-lg);
   border: var(--border-soft);
@@ -72,9 +97,14 @@ body {
     border-color var(--motion-normal) var(--motion-ease);
 }
 
+.glow-card {
+  box-shadow: var(--shadow-1), var(--glow-soft);
+  border-color: rgba(0, 142, 249, 0.2);
+}
+
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-2), var(--glow-medium);
   border-color: rgba(0, 142, 249, 0.3);
 }
 
@@ -89,15 +119,19 @@ body {
     filter var(--motion-fast) var(--motion-ease);
 }
 
+.glow-button {
+  box-shadow: var(--glow-medium);
+}
+
 .ui-button:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-2), var(--glow-strong);
   filter: brightness(1.05);
 }
 
 .ui-button:active {
   transform: scale(0.98);
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-1), var(--glow-soft);
 }
 
 .ui-button:focus-visible,
@@ -120,6 +154,15 @@ body {
   border-radius: 999px;
   border: var(--border-soft);
   box-shadow: var(--shadow-1);
+}
+
+.glow-badge {
+  box-shadow: var(--shadow-1), var(--glow-soft);
+  border-color: rgba(0, 142, 249, 0.2);
+}
+
+.glow-text {
+  text-shadow: 0 0 16px rgba(0, 142, 249, 0.25);
 }
 
 .reveal {
@@ -147,6 +190,10 @@ body {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .glow-bg::before {
+    opacity: 0.15;
   }
 }
 
