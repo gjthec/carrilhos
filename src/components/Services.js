@@ -103,10 +103,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="services" ref={sectionRef}>
+    <section id="services" className="services ui-section reveal" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Nossos Serviços</span>
+          <span className="section-tag ui-badge">Nossos Serviços</span>
           <h2 className="section-title">Soluções Completas para seu E-commerce</h2>
           <p className="section-description">
             Estratégia, operação e performance em um plano sob medida para escalar seu e-commerce com previsibilidade.
@@ -120,7 +120,7 @@ const Services = () => {
               <div 
                 key={index} 
                 ref={el => cardRefs.current[index] = el}
-                className="service-card" 
+                className="service-card ui-card hover-lift"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="service-icon">
@@ -139,7 +139,7 @@ const Services = () => {
                   ))}
                 </ul>
                 <button
-                  className="service-button"
+                  className="service-button ui-button"
                   onClick={() => scrollToSection('contact')}
                 >
                   Quero esse plano
@@ -152,7 +152,7 @@ const Services = () => {
         <div className="services-cta">
           <p>Pronto para transformar seu e-commerce em um motor de vendas?</p>
           <button
-            className="btn btn-primary"
+            className="btn btn-primary ui-button"
             onClick={() => scrollToSection('contact')}
           >
             Agendar diagnóstico
@@ -164,5 +164,3 @@ const Services = () => {
 };
 
 export default Services;
-
-

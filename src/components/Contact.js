@@ -137,10 +137,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="contact" ref={sectionRef}>
+    <section id="contact" className="contact ui-section reveal" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Entre em Contato</span>
+          <span className="section-tag ui-badge">Entre em Contato</span>
           <h2 className="section-title">Vamos conversar sobre seu projeto</h2>
           <p className="section-description">
             Estamos prontos para ajudar você a transformar seu e-commerce
@@ -163,7 +163,7 @@ const Contact = () => {
                     key={index}
                     ref={el => contactItemRefs.current[index] = el}
                     href={info.link || '#'}
-                    className="contact-item"
+                    className="contact-item ui-card hover-lift ui-link"
                     style={{ animationDelay: `${index * 0.15}s` }}
                   >
                     <div className="contact-icon">
@@ -195,7 +195,7 @@ const Contact = () => {
             </div> */}
           </div>
 
-          <div className="contact-form-wrapper" ref={formRef}>
+          <div className="contact-form-wrapper ui-card" ref={formRef}>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Nome Completo *</label>
@@ -262,7 +262,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="btn btn-primary submit-button"
+                className="btn btn-primary submit-button ui-button"
                 disabled={isSubmitting}
               >
                 <FiSend />
@@ -277,4 +277,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

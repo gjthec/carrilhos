@@ -31,6 +31,16 @@
   --shadow-glow: 0 0 8px rgba(0, 142, 249, 0.1);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-fast: all 0.2s ease;
+  --motion-fast: 150ms;
+  --motion-normal: 250ms;
+  --motion-slow: 400ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-1: 0 6px 18px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --shadow-3: 0 18px 45px rgba(0, 0, 0, 0.45);
+  --radius-lg: 16px;
+  --border-soft: 1px solid rgba(148, 163, 184, 0.18);
+  --focus-ring: 0 0 0 3px rgba(0, 142, 249, 0.35);
 }
 
 body {
@@ -47,6 +57,97 @@ body {
   background-attachment: fixed;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+.ui-section {
+  position: relative;
+}
+
+.ui-card {
+  border-radius: var(--radius-lg);
+  border: var(--border-soft);
+  box-shadow: var(--shadow-1);
+  transition: transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) var(--motion-ease),
+    border-color var(--motion-normal) var(--motion-ease);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
+  border-color: rgba(0, 142, 249, 0.3);
+}
+
+.hover-lift:active {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-1);
+}
+
+.ui-button {
+  transition: transform var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease),
+    filter var(--motion-fast) var(--motion-ease);
+}
+
+.ui-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
+  filter: brightness(1.05);
+}
+
+.ui-button:active {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-1);
+}
+
+.ui-button:focus-visible,
+.ui-link:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 10px;
+}
+
+.ui-link {
+  transition: color var(--motion-fast) var(--motion-ease),
+    text-shadow var(--motion-fast) var(--motion-ease);
+}
+
+.ui-link:hover {
+  text-shadow: 0 0 10px rgba(0, 142, 249, 0.35);
+}
+
+.ui-badge {
+  border-radius: 999px;
+  border: var(--border-soft);
+  box-shadow: var(--shadow-1);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--motion-slow) var(--motion-ease),
+    transform var(--motion-slow) var(--motion-ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 html {

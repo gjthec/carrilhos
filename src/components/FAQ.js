@@ -176,10 +176,10 @@ const FAQ = () => {
   }, [openIndex]);
 
   return (
-    <section id="faq" className="faq">
+    <section id="faq" className="faq ui-section reveal">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Perguntas Frequentes</span>
+          <span className="section-tag ui-badge">Perguntas Frequentes</span>
           <h2 className="section-title">Tire suas dúvidas</h2>
           <p className="section-description">
             Encontre respostas para as principais questões sobre nossos serviços e como podemos ajudar seu e-commerce.
@@ -191,11 +191,11 @@ const FAQ = () => {
             <div 
               key={index}
               ref={el => faqRefs.current[index] = el}
-              className={`faq-item ${openIndex === index ? 'open' : ''}`}
+              className={`faq-item ui-card hover-lift ${openIndex === index ? 'open' : ''}`}
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <button 
-                className="faq-question"
+                className="faq-question ui-button"
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={openIndex === index}
               >
@@ -221,4 +221,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

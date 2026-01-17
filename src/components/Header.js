@@ -50,26 +50,26 @@ const Header = () => {
           </div>
 
           <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-            <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToTop(); }}>
+            <a className="ui-link" href="#hero" onClick={(e) => { e.preventDefault(); scrollToTop(); }}>
               Início
             </a>
-            <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
+            <a className="ui-link" href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
               Serviços
             </a>
-            <a href="#comparativo" onClick={(e) => { e.preventDefault(); scrollToSection('comparativo'); }}>
+            <a className="ui-link" href="#comparativo" onClick={(e) => { e.preventDefault(); scrollToSection('comparativo'); }}>
               Comparativo
             </a>
-            <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
+            <a className="ui-link" href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
               Sobre
             </a>
-            <a href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>
+            <a className="ui-link" href="#testimonials" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>
               Depoimentos
             </a>
-            <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
+            <a className="ui-link" href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
               Contato
             </a>
             <button
-              className="cta-button"
+              className="cta-button ui-button"
               onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
             >
               Solicitar Consultoria
@@ -91,5 +91,4 @@ const Header = () => {
 };
 
 export default Header;
-
 
