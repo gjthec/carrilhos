@@ -58,16 +58,16 @@ const ComparisonSection = () => {
   const chart = useChartPaths(currentData.chartData);
 
   return (
-    <section className="comparison ui-section reveal glow-bg" id="comparativo">
+    <section className="comparison ui-section reveal" id="comparativo">
       <div className="container">
         <div className="comparison-grid">
           <div className="comparison-content">
-            <div className="comparison-badge ui-badge glow-badge">
+            <div className="comparison-badge ui-badge">
               <HiArrowTrendingUp size={16} />
               Resultados comprovados
             </div>
 
-            <h2 className="comparison-title glow-text">
+            <h2 className="comparison-title">
               Transformação no e-commerce:
               <span className="comparison-title-highlight"> antes e depois da Carrilhos</span>
             </h2>
@@ -92,7 +92,7 @@ const ComparisonSection = () => {
 
             <div className="comparison-actions">
               <button
-                className="comparison-action comparison-action--primary ui-button glow-button"
+                className="comparison-action comparison-action--primary ui-button"
                 type="button"
                 onClick={() => {
                   const element = document.getElementById('contact');
@@ -105,7 +105,7 @@ const ComparisonSection = () => {
                 <HiArrowRight size={18} />
               </button>
               <button
-                className="comparison-action comparison-action--ghost ui-button glow-button"
+                className="comparison-action comparison-action--ghost ui-button"
                 type="button"
                 onClick={() => {
                   const element = document.getElementById('services');
@@ -120,7 +120,7 @@ const ComparisonSection = () => {
           </div>
 
           <div className="comparison-dashboard">
-            <div className="comparison-card ui-card glow-card">
+            <div className="comparison-card ui-card">
               <div className="comparison-card-header">
                 <div className="comparison-tabs">
                   {[
@@ -134,7 +134,7 @@ const ComparisonSection = () => {
                         key={scen.id}
                         type="button"
                         onClick={() => setActiveScenario(scen.id)}
-                        className={`comparison-tab ui-button glow-button ${activeScenario === scen.id ? 'active' : ''}`}
+                        className={`comparison-tab ui-button ${activeScenario === scen.id ? 'active' : ''}`}
                       >
                         <Icon size={14} />
                         <span>{scen.label}</span>
@@ -146,14 +146,14 @@ const ComparisonSection = () => {
                 <div className="comparison-toggle">
                   <button
                     type="button"
-                    className={`comparison-toggle-label ui-button glow-button ${!isAfter ? 'active' : ''}`}
+                    className={`comparison-toggle-label ui-button ${!isAfter ? 'active' : ''}`}
                     onClick={() => setIsAfter(false)}
                   >
                     Sem Carrilhos
                   </button>
                   <button
                     type="button"
-                    className={`comparison-toggle-track ui-button glow-button ${isAfter ? 'active' : ''}`}
+                    className={`comparison-toggle-track ui-button ${isAfter ? 'active' : ''}`}
                     role="switch"
                     aria-checked={isAfter}
                     onClick={() => setIsAfter((prev) => !prev)}
@@ -162,7 +162,7 @@ const ComparisonSection = () => {
                   </button>
                   <button
                     type="button"
-                    className={`comparison-toggle-label ui-button glow-button ${isAfter ? 'active' : ''}`}
+                    className={`comparison-toggle-label ui-button ${isAfter ? 'active' : ''}`}
                     onClick={() => setIsAfter(true)}
                   >
                     Com Carrilhos
@@ -178,7 +178,7 @@ const ComparisonSection = () => {
                       (kpi.trend === 'down' && kpi.isInverse);
 
                     return (
-                      <div key={kpi.id} className="comparison-kpi ui-card hover-lift glow-card">
+                      <div key={kpi.id} className="comparison-kpi ui-card hover-lift">
                         <div className="comparison-kpi-header">
                           <span>{kpi.label}</span>
                           {isAfter && (
