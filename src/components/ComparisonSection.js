@@ -60,19 +60,18 @@ const ComparisonSection = () => {
   return (
     <section className="comparison ui-section reveal" id="comparativo">
       <div className="container">
-        <div className="section-header comparison-header">
-          <span className="section-tag ui-badge">
-            <HiArrowTrendingUp size={16} />
-            Resultados comprovados
-          </span>
-          <h2 className="section-title">
-            Transformação no e-commerce:
-            <span className="comparison-title-highlight"> antes e depois da Carrilhos</span>
-          </h2>
-        </div>
-
         <div className="comparison-grid">
           <div className="comparison-content">
+            <div className="section-header comparison-header">
+              <span className="section-tag ui-badge">
+                <HiArrowTrendingUp size={16} />
+                Resultados comprovados
+              </span>
+              <h2 className="section-title">
+                Transformação no e-commerce:
+                <span className="comparison-title-highlight"> antes e depois da Carrilhos</span>
+              </h2>
+            </div>
             <p className="section-description comparison-description">
               Ajustes estratégicos em tráfego, catálogo, precificação e operação. Transformamos dados em
               rotina de gestão para aumentar a conversão e proteger a margem.
