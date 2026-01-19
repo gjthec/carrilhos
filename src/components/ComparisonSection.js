@@ -69,14 +69,14 @@ const ComparisonSection = () => {
             Transformação no e-commerce:
             <span className="comparison-title-highlight"> antes e depois da Carrilhos</span>
           </h2>
-          <p className="section-description">
-            Ajustes estratégicos em tráfego, catálogo, precificação e operação. Transformamos dados em
-            rotina de gestão para aumentar a conversão e proteger a margem.
-          </p>
         </div>
 
         <div className="comparison-grid">
           <div className="comparison-content">
+            <p className="section-description comparison-description">
+              Ajustes estratégicos em tráfego, catálogo, precificação e operação. Transformamos dados em
+              rotina de gestão para aumentar a conversão e proteger a margem.
+            </p>
 
             <ul className="comparison-list">
               {[
