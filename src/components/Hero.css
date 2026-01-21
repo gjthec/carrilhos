@@ -202,6 +202,18 @@
   flex-wrap: wrap;
 }
 
+.hero-secondary-cta {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: var(--text-secondary);
+}
+
+.hero-secondary-cta:hover {
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
 .btn {
   padding: 1rem 2.5rem;
   font-size: 0.95rem;

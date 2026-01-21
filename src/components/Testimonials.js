@@ -90,11 +90,11 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="testimonials" ref={sectionRef}>
+    <section id="testimonials" className="testimonials ui-section reveal glow-bg" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Depoimentos</span>
-          <h2 className="section-title">O que nossos clientes dizem</h2>
+          <span className="section-tag ui-badge glow-badge">Depoimentos</span>
+          <h2 className="section-title glow-text">O que nossos clientes dizem</h2>
           <p className="section-description">
             Confira a opinião de quem já trabalhou conosco
           </p>
@@ -105,7 +105,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className={`testimonial-card ${
+                className={`testimonial-card ui-card hover-lift glow-card ${
                   index === currentIndex ? 'active' : ''
                 } ${index < currentIndex ? 'prev' : ''} ${
                   index > currentIndex ? 'next' : ''
@@ -157,10 +157,24 @@ const Testimonials = () => {
             </button>
           </div>
         </div>
+
+        <div className="testimonials-cta">
+          <p>Quer resultados parecidos no seu e-commerce?</p>
+          <button
+            className="btn btn-primary ui-button glow-button"
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+          >
+            Quero falar com a Carrilhos
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Testimonials;
-

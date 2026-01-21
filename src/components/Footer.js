@@ -15,12 +15,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className="footer ui-section reveal glow-bg">
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <h3>Consultoria Carrilhos</h3>
+              <h3 className="glow-text">Consultoria Carrilhos</h3>
               <p>Especialistas em E-commerce e Gestão</p>
             </div>
             <p className="footer-description">
@@ -28,16 +28,16 @@ const Footer = () => {
               suas vendas online.
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="Facebook" className="social-link">
+              <a href="#" aria-label="Facebook" className="social-link ui-link">
                 <FaFacebook />
               </a>
-              <a href="#" aria-label="Instagram" className="social-link">
+              <a href="#" aria-label="Instagram" className="social-link ui-link">
                 <FaInstagram />
               </a>
-              <a href="#" aria-label="LinkedIn" className="social-link">
+              <a href="#" aria-label="LinkedIn" className="social-link ui-link">
                 <FaLinkedin />
               </a>
-              <a href="#" aria-label="WhatsApp" className="social-link">
+              <a href="#" aria-label="WhatsApp" className="social-link ui-link">
                 <FaWhatsapp />
               </a>
             </div>
@@ -47,27 +47,27 @@ const Footer = () => {
             <h4>Links Rápidos</h4>
             <ul className="footer-links">
               <li>
-                <a href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>
+                <a className="ui-link" href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>
                   Início
                 </a>
               </li>
               <li>
-                <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
+                <a className="ui-link" href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
                   Serviços
                 </a>
               </li>
               <li>
-                <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
+                <a className="ui-link" href="#sobre" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>
                   Sobre Nós
                 </a>
               </li>
               <li>
-                <a href="#depoimentos" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>
+                <a className="ui-link" href="#depoimentos" onClick={(e) => { e.preventDefault(); scrollToSection('testimonials'); }}>
                   Depoimentos
                 </a>
               </li>
               <li>
-                <a href="#contato" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
+                <a className="ui-link" href="#contato" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
                   Contato
                 </a>
               </li>
@@ -78,22 +78,22 @@ const Footer = () => {
             <h4>Serviços</h4>
             <ul className="footer-links">
               <li>
-                <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
+                <a className="ui-link" href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
                   Gestão de E-commerce
                 </a>
               </li>
               <li>
-                <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
+                <a className="ui-link" href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
                   Consultoria Estratégica
                 </a>
               </li>
               <li>
-                <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
+                <a className="ui-link" href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
                   Marketing Digital
                 </a>
               </li>
               <li>
-                <a href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
+                <a className="ui-link" href="#servicos" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
                   Treinamento
                 </a>
               </li>
@@ -107,13 +107,13 @@ const Footer = () => {
                 <span className="contact-icon">
                   <HiPhone />
                 </span>
-                <a href="tel:+5519989635680">(19) 98963-5680</a>
+                <a className="ui-link" href="tel:+5519989635680">(19) 98963-5680</a>
               </li>
               <li>
                 <span className="contact-icon">
                   <HiMail />
                 </span>
-                <a href="mailto:contato@consultoriacarrilhos.com.br">
+                <a className="ui-link" href="mailto:contato@consultoriacarrilhos.com.br">
                 contato@consultoriacarrilhos.com.br
                 </a>
               </li>
@@ -129,7 +129,7 @@ const Footer = () => {
                 href="https://calendly.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="footer-button"
+                className="footer-button ui-button glow-button"
               >
                 <HiCalendar />
                 <span>Agendar Consulta</span>
@@ -148,9 +148,9 @@ const Footer = () => {
               &copy; {currentYear} Consultoria Carrilhos. Todos os direitos reservados.
             </p>
             <div className="footer-policies">
-              <a href="#politicas">Políticas</a>
+              <a className="ui-link" href="#politicas">Políticas</a>
               <span>•</span>
-              <a href="#privacidade">Privacidade</a>
+              <a className="ui-link" href="#privacidade">Privacidade</a>
             </div>
           </div>
         </div>
@@ -160,4 +160,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

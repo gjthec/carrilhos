@@ -141,7 +141,7 @@ const Hero = () => {
 
   return (
     <>
-    <section id="hero" className="hero" ref={heroRef}>
+    <section id="hero" className="hero ui-section reveal glow-bg" ref={heroRef}>
       <div className="hero-background">
         <div className="hero-logo-background">
           <img src={logoIcon} alt="Carrilhos" />
@@ -152,7 +152,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-layout">
           <div className="hero-content">
-            <h1 className="hero-title">
+            <h1 className="hero-title glow-text">
               <span className="typed-text">{typedText}</span>
               <span className="cursor">|</span>
               <span className="hero-title-subtitle hero-title-subtitle-inline"> de E-commerce</span>
@@ -161,25 +161,31 @@ const Hero = () => {
             </h1>
             
             <p className="hero-description">
-              Soluções estratégicas em e-commerce e gestão para empresas que buscam 
-              crescimento sustentável e excelência operacional no ambiente digital.
+              Estratégia, operação e performance para empresas que buscam escalar o e-commerce
+              com previsibilidade, margem e uma jornada de compra impecável.
             </p>
 
             <div className="hero-actions">
               <button 
-                className="btn btn-primary"
+                className="btn btn-primary ui-button glow-button"
                 onClick={() => scrollToSection('contact')}
               >
-                Solicitar Consultoria
+                Solicitar diagnóstico gratuito
                 <HiArrowRight />
               </button>
               <button 
-                className="btn btn-secondary"
-                onClick={() => scrollToSection('services')}
+                className="btn btn-secondary ui-button glow-button"
+                onClick={() => scrollToSection('comparativo')}
               >
-                Conhecer Serviços
+                Ver antes e depois
               </button>
             </div>
+            <button
+              className="btn btn-secondary hero-secondary-cta ui-button glow-button"
+              onClick={() => scrollToSection('services')}
+            >
+              Conhecer serviços
+            </button>
           </div>
         </div>
       </div>

@@ -180,12 +180,12 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="about" ref={sectionRef}>
+    <section id="about" className="about ui-section reveal glow-bg" ref={sectionRef}>
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <div className="section-label">Sobre Nós</div>
-            <h2 className="section-title">
+            <div className="section-label ui-badge glow-badge">Sobre Nós</div>
+            <h2 className="section-title glow-text">
               Especialistas em E-commerce e Gestão
             </h2>
             <div className="about-description-wrapper">
@@ -215,10 +215,10 @@ const About = () => {
               </div>
             </div>
             <button 
-              className="btn btn-primary"
+              className="btn btn-primary ui-button glow-button"
               onClick={() => scrollToSection('contact')}
             >
-              Saiba Mais
+              Falar com especialista
               <HiArrowRight />
             </button>
           </div>
@@ -226,7 +226,7 @@ const About = () => {
           <div className="about-cards">
             <div 
               ref={el => cardRefs.current[0] = el}
-              className="about-card card-primary"
+              className="about-card card-primary ui-card hover-lift glow-card"
               style={{ animationDelay: '0.2s' }}
             >
               <div className="card-header">
@@ -242,7 +242,7 @@ const About = () => {
             
             <div 
               ref={el => cardRefs.current[1] = el}
-              className="about-card card-secondary"
+              className="about-card card-secondary ui-card hover-lift glow-card"
               style={{ animationDelay: '0.4s' }}
             >
               <div className="card-header">
@@ -270,7 +270,7 @@ const About = () => {
                 <div 
                   key={index} 
                   ref={el => valueCardRefs.current[index] = el}
-                  className="value-card" 
+                  className="value-card ui-card hover-lift glow-card"
                   style={{ animationDelay: `${0.3 + index * 0.2}s` }}
                 >
                   <div className="value-icon">
