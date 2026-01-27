@@ -172,6 +172,17 @@ const About = () => {
     }
   ];
 
+  const companyLogos = [
+    { name: 'Empresa Norte' },
+    { name: 'Viva Moda' },
+    { name: 'Casa Viva' },
+    { name: 'TechLab' },
+    { name: 'PetMais' },
+    { name: 'Beleza Pura' },
+    { name: 'NutriLife' },
+    { name: 'SportWay' }
+  ];
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -199,6 +210,23 @@ const About = () => {
                 nosso objetivo é capturar leads e compartilhar insights valiosos sobre e-commerce 
                 e a evolução de clientes.
               </p>
+            </div>
+            <div className="company-carousel-section">
+              <div className="company-carousel-header">
+                <h3 className="company-carousel-title">Empresas que trabalhamos</h3>
+                <p className="company-carousel-subtitle">
+                  Logos de parceiros e clientes que confiam na Consultoria Carrilhos.
+                </p>
+              </div>
+              <div className="company-carousel" aria-label="Carrossel de logos das empresas atendidas">
+                <div className="company-track">
+                  {[...companyLogos, ...companyLogos].map((company, index) => (
+                    <div className="company-logo" key={`${company.name}-${index}`}>
+                      <span>{company.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="about-stats" ref={statsRef}>
               <div className="about-stat">
