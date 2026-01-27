@@ -211,6 +211,23 @@ const About = () => {
                 e a evolução de clientes.
               </p>
             </div>
+            <div className="company-carousel-section">
+              <div className="company-carousel-header">
+                <h3 className="company-carousel-title">Empresas que trabalhamos</h3>
+                <p className="company-carousel-subtitle">
+                  Logos de parceiros e clientes que confiam na Consultoria Carrilhos.
+                </p>
+              </div>
+              <div className="company-carousel" aria-label="Carrossel de logos das empresas atendidas">
+                <div className="company-track">
+                  {[...companyLogos, ...companyLogos].map((company, index) => (
+                    <div className="company-logo" key={`${company.name}-${index}`}>
+                      <span>{company.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             <div className="about-stats" ref={statsRef}>
               <div className="about-stat">
                 <div className="stat-value">{counters.years}+</div>
@@ -292,24 +309,6 @@ const About = () => {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        <div className="company-carousel-section">
-          <div className="company-carousel-header">
-            <h3 className="company-carousel-title">Empresas que trabalhamos</h3>
-            <p className="company-carousel-subtitle">
-              Logos de parceiros e clientes que confiam na Consultoria Carrilhos.
-            </p>
-          </div>
-          <div className="company-carousel" aria-label="Carrossel de logos das empresas atendidas">
-            <div className="company-track">
-              {[...companyLogos, ...companyLogos].map((company, index) => (
-                <div className="company-logo" key={`${company.name}-${index}`}>
-                  <span>{company.name}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
